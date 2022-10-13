@@ -42,6 +42,16 @@ def healthcheck():
     app.logger.debug('DEBUG message')
     return response
 
+# Define the metrics route of the web application 
+@app.route('/metrics')
+def metrics():
+    response = app.response_class(
+            response=json.dumps({"db_connection_count": 1, "post_count": 7}),
+            status=200,
+            mimetype='application/json'
+    )
+    app.logger.info('Metrics request successfull')
+    return response
 
 # Define how each individual article is rendered 
 # If the post ID is not found a 404 page is shown
