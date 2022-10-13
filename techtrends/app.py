@@ -30,6 +30,19 @@ def index():
     connection.close()
     return render_template('index.html', posts=posts)
 
+# Define the healthcheck route of the web application 
+@app.route('/healthz')
+def healthcheck():
+    response = app.response_class(
+            response=json.dumps({"result":"OK - healthy"}),
+            status=200,
+            mimetype='application/json'
+    )
+    app.logger.info('Status request successfull')
+    app.logger.debug('DEBUG message')
+    return response
+
+
 # Define how each individual article is rendered 
 # If the post ID is not found a 404 page is shown
 @app.route('/<int:post_id>')
