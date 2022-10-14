@@ -3,11 +3,8 @@ import sqlite3
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
 
-# Test Code #
+# Define global variables
 db_connection_count = 0
-db_connection_count += 1
-# End of Test Code #
-
 
 
 # Function to get a database connection.
@@ -71,6 +68,8 @@ def post(post_id):
     if post is None:
       return render_template('404.html'), 404
     else:
+      global db_connection_count
+      db_connection_count += 1
       return render_template('post.html', post=post)
 
 # Define the About Us page
