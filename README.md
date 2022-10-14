@@ -17,10 +17,10 @@ Additionally, the initial sitemap of the website can be found below:
 
 Where:
 
-About page - presents a quick overview of the TechTrends site
-Index page - contains the content of the main page, with a list of all available posts within TechTrends
-New Post page - provides a form to submit a new post
-404 page - is rendered when an article ID does not exist is accessed
+About page - presents a quick overview of the TechTrends site<br />
+Index page - contains the content of the main page, with a list of all available posts within TechTrends<br />
+New Post page - provides a form to submit a new post<br />
+404 page - is rendered when an article ID does not exist is accessed<br />
 And lastly, the first prototype of the application is storing and accessing posts from the "POSTS" SQL table. A post entry contains the post ID (primary key), creation timestamp, title, and content. The "POSTS" table schema can be examined below:
 
 ![TechTrends Schema](https://video.udacity-data.com/topher/2021/January/5ff81ebb_screenshot-2021-01-07-at-22.16.30/screenshot-2021-01-07-at-22.16.30.png)
