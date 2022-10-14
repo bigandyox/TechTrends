@@ -15,7 +15,7 @@ Additionally, the initial sitemap of the website can be found below:
 
 ![TechTrends Sitemap](https://video.udacity-data.com/topher/2021/January/5ff78576_screenshot-2021-01-07-at-22.04.29/screenshot-2021-01-07-at-22.04.29.png)
 
-Where:
+## Where:
 
 About page - presents a quick overview of the TechTrends site
 Index page - contains the content of the main page, with a list of all available posts within TechTrends
@@ -25,7 +25,7 @@ And lastly, the first prototype of the application is storing and accessing post
 
 ![TechTrends Schema](https://video.udacity-data.com/topher/2021/January/5ff81ebb_screenshot-2021-01-07-at-22.16.30/screenshot-2021-01-07-at-22.16.30.png)
 
-Project Steps Overview
+## Project Steps Overview
 1. Apply the best development practices and develop the status and health check endpoints for the TechTrends application.
 2. Package the TechTrends application by creating a Dockerfile and Docker image.
 3. Implement the Continuous Integration practices, by using GitHub Actions to automate the build and push of the Docker image to DockerHub.
