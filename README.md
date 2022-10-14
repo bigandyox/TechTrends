@@ -15,7 +15,7 @@ Additionally, the initial sitemap of the website can be found below:
 
 ![TechTrends Sitemap](https://video.udacity-data.com/topher/2021/January/5ff78576_screenshot-2021-01-07-at-22.04.29/screenshot-2021-01-07-at-22.04.29.png)
 
-## Where:
+Where:
 
 About page - presents a quick overview of the TechTrends site
 Index page - contains the content of the main page, with a list of all available posts within TechTrends
