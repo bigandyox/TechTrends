@@ -1,0 +1,12 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3111
+ * Running on http://192.168.95.246:3111
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:app:Metrics request successfull
+INFO:werkzeug:192.168.80.1 - - [14/Oct/2022 18:39:54] "GET /metrics HTTP/1.1" 200 -
+INFO:app:Status request successfull
+DEBUG:app:DEBUG message
+INFO:werkzeug:192.168.80.1 - - [14/Oct/2022 18:39:56] "GET /healthz HTTP/1.1" 200 -
+INFO:werkzeug:192.168.80.1 - - [14/Oct/2022 18:39:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.80.1 - - [14/Oct/2022 18:39:59] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
