@@ -6,7 +6,6 @@ from werkzeug.exceptions import abort
 # Define global variables
 db_connection_count = 0
 
-
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
 def get_db_connection():
