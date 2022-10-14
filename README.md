@@ -9,15 +9,11 @@ The web application is written using the Python Flask framework. It uses SQLite,
 
 Below you can examine the main components of the firsts prototype of the application:
 
-Users > TechTrends UI > Articles > SQLite db
+![TechTrends Components](https://video.udacity-data.com/topher/2021/January/5ff782da_screenshot-2021-01-07-at-21.53.16/screenshot-2021-01-07-at-21.53.16.png)
 
 Additionally, the initial sitemap of the website can be found below:
 
-TechTrends
-    -About
-    -Index
-    -New Post
-    -404 Page
+![TechTrends Sitemap](https://video.udacity-data.com/topher/2021/January/5ff78576_screenshot-2021-01-07-at-22.04.29/screenshot-2021-01-07-at-22.04.29.png)
 
 Where:
 
@@ -27,11 +23,7 @@ New Post page - provides a form to submit a new post
 404 page - is rendered when an article ID does not exist is accessed
 And lastly, the first prototype of the application is storing and accessing posts from the "POSTS" SQL table. A post entry contains the post ID (primary key), creation timestamp, title, and content. The "POSTS" table schema can be examined below:
 
-POSTS
-ID*,Integer
-Created,Timestamp
-Title,Text
-Content,Text
+![TechTrends Schema](https://video.udacity-data.com/topher/2021/January/5ff81ebb_screenshot-2021-01-07-at-22.16.30/screenshot-2021-01-07-at-22.16.30.png)
 
 Project Steps Overview
 1. Apply the best development practices and develop the status and health check endpoints for the TechTrends application.
