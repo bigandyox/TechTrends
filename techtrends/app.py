@@ -1,4 +1,6 @@
 import sqlite3
+import logging
+import sys
 
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
@@ -41,8 +43,6 @@ def healthcheck():
             status=200,
             mimetype='application/json'
     )
-    app.logger.info('Status request successfull')
-    app.logger.debug('DEBUG message')
     return response
 
 # Define the metrics route of the web application 
@@ -56,7 +56,6 @@ def metrics():
             status=200,
             mimetype='application/json'
     )
-    app.logger.info('Metrics request successfull')
     return response
 
 # Define how each individual article is rendered 
@@ -65,15 +64,18 @@ def metrics():
 def post(post_id):
     post = get_post(post_id)
     if post is None:
+      app.logger.info('Non-existing article')
       return render_template('404.html'), 404
     else:
       global db_connection_count
       db_connection_count += 1
+      app.logger.info('Article "{}" retrieved'.format(post['title']))
       return render_template('post.html', post=post)
 
 # Define the About Us page
 @app.route('/about')
 def about():
+    app.logger.info('"About Us" page retrieved')
     return render_template('about.html')
 
 # Define the post creation functionality 
@@ -90,6 +92,7 @@ def create():
             connection.execute('INSERT INTO posts (title, content) VALUES (?, ?)',
                          (title, content))
             connection.commit()
+            app.logger.info('Article "{}" created'.format(title))
             connection.close()
 
             return redirect(url_for('index'))
@@ -98,4 +101,6 @@ def create():
 
 # start the application on port 3111
 if __name__ == "__main__":
+# Stream logs to a file
+   logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG, stream=sys.stdout)
    app.run(host='0.0.0.0', port='3111')
