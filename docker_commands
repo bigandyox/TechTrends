@@ -2,10 +2,51 @@
 # docker build --tag techtrends .  
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+# docker run -d -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+# docker logs -f --details <Container ID>
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+  <!-- * Serving Flask app 'app' (lazy loading)
+  * Environment: production
+    WARNING: This is a development server. Do not use it in a production deployment.
+    Use a production WSGI server instead.
+  * Debug mode: off
+ 10/17/2022 04:53:30 PM  * Running on all addresses.
+    WARNING: This is a development server. Do not use it in a production deployment.
+ 10/17/2022 04:53:30 PM  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+ 10/17/2022 04:54:41 PM "About Us" page retrieved
+ 10/17/2022 04:54:41 PM 172.17.0.1 - - [17/Oct/2022 16:54:41] "GET /about HTTP/1.1" 200 -
+ 10/17/2022 04:54:41 PM 172.17.0.1 - - [17/Oct/2022 16:54:41] "GET /static/css/main.css HTTP/1.1" 304 -
+ 10/17/2022 04:54:47 PM 172.17.0.1 - - [17/Oct/2022 16:54:47] "GET /metrics HTTP/1.1" 200 -
+ 10/17/2022 04:54:55 PM 172.17.0.1 - - [17/Oct/2022 16:54:55] "GET /healthz HTTP/1.1" 200 -
+ 10/17/2022 04:54:58 PM 172.17.0.1 - - [17/Oct/2022 16:54:58] "GET / HTTP/1.1" 200 -
+ 10/17/2022 04:54:58 PM 172.17.0.1 - - [17/Oct/2022 16:54:58] "GET /static/css/main.css HTTP/1.1" 304 -
+ 10/17/2022 04:55:02 PM Article "2020 CNCF Annual Report" retrieved
+ 10/17/2022 04:55:02 PM 172.17.0.1 - - [17/Oct/2022 16:55:02] "GET /1 HTTP/1.1" 200 -
+ 10/17/2022 04:55:02 PM 172.17.0.1 - - [17/Oct/2022 16:55:02] "GET /static/css/main.css HTTP/1.1" 304 -
+ 10/17/2022 04:55:03 PM Article "KubeCon + CloudNativeCon 2021" retrieved
+ 10/17/2022 04:55:03 PM 172.17.0.1 - - [17/Oct/2022 16:55:03] "GET /2 HTTP/1.1" 200 -
+ 10/17/2022 04:55:03 PM 172.17.0.1 - - [17/Oct/2022 16:55:03] "GET /static/css/main.css HTTP/1.1" 304 -
+ 10/17/2022 04:55:05 PM Article "Kubernetes v1.20 Release Notes" retrieved
+ 10/17/2022 04:55:05 PM 172.17.0.1 - - [17/Oct/2022 16:55:05] "GET /3 HTTP/1.1" 200 -
+ 10/17/2022 04:55:05 PM 172.17.0.1 - - [17/Oct/2022 16:55:05] "GET /static/css/main.css HTTP/1.1" 304 -
+ 10/17/2022 04:55:06 PM Article "CNCF Cloud Native Interactive Landscape" retrieved
+ 10/17/2022 04:55:06 PM 172.17.0.1 - - [17/Oct/2022 16:55:06] "GET /4 HTTP/1.1" 200 -
+ 10/17/2022 04:55:06 PM 172.17.0.1 - - [17/Oct/2022 16:55:06] "GET /static/css/main.css HTTP/1.1" 304 -
+ 10/17/2022 04:55:07 PM Article "CNCF Cloud Native Definition v1.0" retrieved
+ 10/17/2022 04:55:07 PM 172.17.0.1 - - [17/Oct/2022 16:55:07] "GET /5 HTTP/1.1" 200 -
+ 10/17/2022 04:55:07 PM 172.17.0.1 - - [17/Oct/2022 16:55:07] "GET /static/css/main.css HTTP/1.1" 304 -
+ 10/17/2022 04:55:09 PM Article "Kubernetes Certification" retrieved
+ 10/17/2022 04:55:09 PM 172.17.0.1 - - [17/Oct/2022 16:55:09] "GET /6 HTTP/1.1" 200 -
+ 10/17/2022 04:55:09 PM 172.17.0.1 - - [17/Oct/2022 16:55:09] "GET /static/css/main.css HTTP/1.1" 304 -
+ 10/17/2022 04:55:11 PM 172.17.0.1 - - [17/Oct/2022 16:55:11] "GET /create HTTP/1.1" 200 -
+ 10/17/2022 04:55:11 PM 172.17.0.1 - - [17/Oct/2022 16:55:11] "GET /static/css/main.css HTTP/1.1" 304 -
+ 10/17/2022 04:55:19 PM Article "test post" created
+ 10/17/2022 04:55:19 PM 172.17.0.1 - - [17/Oct/2022 16:55:19] "POST /create HTTP/1.1" 302 -
+ 10/17/2022 04:55:19 PM 172.17.0.1 - - [17/Oct/2022 16:55:19] "GET / HTTP/1.1" 200 -
+ 10/17/2022 04:55:19 PM 172.17.0.1 - - [17/Oct/2022 16:55:19] "GET /static/css/main.css HTTP/1.1" 304 -
+ 10/17/2022 04:55:33 PM Non-existing article
+ 10/17/2022 04:55:33 PM 172.17.0.1 - - [17/Oct/2022 16:55:33] "GET /110 HTTP/1.1" 404 -
+ 10/17/2022 04:55:33 PM 172.17.0.1 - - [17/Oct/2022 16:55:33] "GET /static/css/main.css HTTP/1.1" 304 - -->

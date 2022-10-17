@@ -5,8 +5,9 @@ LABEL provider="Udacity"
 
 EXPOSE 3111
 
-COPY . /app
+COPY ./techtrends /app
 WORKDIR /app
-RUN pip install -r /app/techtrends/requirements.txt
+RUN pip install -r requirements.txt
+RUN python init_db.py
 
-CMD ["python", "/app/techtrends/init_db.py", "/app/techtrends/app.py"]
+CMD ["python", "app.py"]
