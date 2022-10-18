@@ -1,0 +1,13 @@
+apiVersion: v1
+name: techtrends
+description: Deploys techtrends website
+keywords:
+- techtrends
+version: 1.0.0
+maintainers:
+- name: Andrew Simpson
+  email: andrew.simpson@xyz.com
+
+
+
+
