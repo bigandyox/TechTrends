@@ -1,0 +1,5 @@
+namespace:
+  name: test
+
+service:
+  port: 5111
