@@ -13,6 +13,4 @@ spec:
     {{ else }}
       {{ .Values.service.targetport }}
     {{ end }}
-  selector:
-    app: techtrends
   type: {{ .Values.service.type }}
