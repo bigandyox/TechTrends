@@ -10,6 +10,6 @@ spec:
     targetPort:
       {{ if nil .Values.service.targetport }}
         targetPort: {{ .Values.service.port }}
-      {{ else .Values.service.targetport }}
+      {{ else if .Values.service.targetport "true" }}
         targetPort: {{ .Values.service.targetport }}
   type: {{ .Values.service.type }}
