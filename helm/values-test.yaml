@@ -3,4 +3,4 @@ namespace:
 
 service:
   port: 5111
-  targetport: {}
+  targetport:
