@@ -38,11 +38,21 @@ def index():
 # Define the healthcheck route of the web application 
 @app.route('/healthz')
 def healthcheck():
-    response = app.response_class(
+    try:
+        connection = get_db_connection()
+        connection.execute('SELECT * FROM posts').fetchall()
+        connection.close()
+        response = app.response_class(
             response=json.dumps({"result":"OK - healthy"}),
             status=200,
             mimetype='application/json'
-    )
+        )
+    except: 
+        response = app.response_class(
+            response=json.dumps({"result":"ERROR - unhealthy"}),
+            status=500,
+            mimetype='application/json'
+        )
     return response
 
 # Define the metrics route of the web application 
