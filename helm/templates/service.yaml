@@ -12,4 +12,4 @@ spec:
         targetPort: {{ .Values.service.port }}
       {{ else if .Values.service.targetport "true" }}
         targetPort: {{ .Values.service.targetport }}
-  type: {{ .Values.service.type }}
+    type: {{ .Values.service.type }}
