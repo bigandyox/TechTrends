@@ -8,8 +8,9 @@ spec:
   - port: {{ .Values.service.port }}
     protocol: {{ .Values.service.protocol }}
     targetPort:
-      {{ if nil .Values.service.targetport }}
-        targetPort: {{ .Values.service.port }}
-      {{ else if .Values.service.targetport "true" }}
-        targetPort: {{ .Values.service.targetport }}
+    {{ if nil .Values.service.targetport }}
+      targetPort: {{ .Values.service.port }}
+    {{ else if .Values.service.targetport "true" }}
+      targetPort: {{ .Values.service.targetport }}
+    {{ end }}
     type: {{ .Values.service.type }}
